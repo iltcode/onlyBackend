@@ -9,10 +9,10 @@ const cors = require('cors');
 // express app
 const app = express()
 
-app.use(cors({
-  credentials: true,
-  origin: 'http://localhost:5173',
-}));
+// app.use(cors({
+//   credentials: true,
+//   origin: 'http://localhost:3000',
+// }));
 
 // middleware
 app.use(express.json())
@@ -24,9 +24,6 @@ app.use((req, res, next) => {
 
 
 // routes
-app.get('/', (req,res) => {
-  res.send('works');
-})
 app.use('/api/workouts', workoutRoutes)
 app.use('/api/user', userRoutes)
 
