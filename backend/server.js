@@ -9,10 +9,10 @@ const cors = require('cors');
 // express app
 const app = express()
 
-// app.use(cors({
-//   credentials: true,
-//   origin: 'http://localhost:3000',
-// }));
+app.use(cors({
+  credentials: true,
+  origin: 'https://651b54003381d6242a3bffa6--darling-wisp-73ddef.netlify.app',
+}));
 
 // middleware
 app.use(express.json())
